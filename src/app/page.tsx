@@ -18,8 +18,6 @@ import {
   SiTailwindcss,
   SiDjango,
   SiSpringboot,
-  SiPostgresql,
-  SiMysql,
   SiStreamlit,
   SiOpenai,
 } from "react-icons/si";
@@ -74,15 +72,15 @@ export default function Home() {
           applications. I recently earned my{" "}
           <strong>Computer Science degree</strong> from <strong>FIU</strong>,
           where I led <strong>Agile projects</strong> and built backend systems
-          using <strong>Java</strong> and <strong>MySQL</strong>. Since then,
-          I've developed <strong>full-stack applications</strong> with{" "}
+          using <strong>Java</strong> and <strong>MySQL</strong>. Since then, I
+          have developed <strong>full-stack applications</strong> with{" "}
           <strong>Django</strong>, created <strong>AI-powered tools</strong>{" "}
           using <strong>Python</strong> and <strong>OpenAI</strong>, and
           continued sharpening my skills across the stack. I also design and
           build modern, responsive frontends using <strong>React</strong> and{" "}
           <strong>Next.js</strong>, bringing clean UI and strong performance
-          together. I'm driven by curiosity, collaboration, and the challenge of
-          turning ideas into scalable, real-world solutions.
+          together. I am driven by curiosity, collaboration, and the challenge
+          of turning ideas into scalable, real-world solutions.
         </p>
       </section>
 
@@ -117,13 +115,10 @@ export default function Home() {
             <FaPython className="mx-auto text-3xl" />
             <p className="text-sm font-semibold mt-2">Python</p>
           </div>
+
           <div>
-            <SiMysql className="mx-auto text-3xl" />
-            <p className="text-sm font-semibold mt-2">MySQL</p>
-          </div>
-          <div>
-            <SiPostgresql className="mx-auto text-3xl" />
-            <p className="text-sm font-semibold mt-2">PostgreSQL</p>
+            <FaDatabase className="mx-auto text-3xl" />
+            <p className="text-sm font-semibold mt-2">PostgreSQL/MySQL</p>
           </div>
           <div>
             <FaJava className="mx-auto text-3xl" />

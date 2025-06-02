@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   description:
     "Full-stack developer building web applications with React, Next.js, Django, and AI tools. Based in Miami, FL.",
   icons: {
-    icon: "/jglogo.ico", // Customize with your favicon path
+    icon: "/jglogo.ico",
   },
-  metadataBase: new URL("https://joellgarcia.com"), // replace with your domain
+  metadataBase: new URL("https://joellgarcia.com"),
   keywords: [
     "full-stack developer",
     "React developer",
@@ -72,7 +72,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
+      <body className={`${inter.variable} font-sans antialiased`}>
         <div className="fixed top-4 right-4 z-50">
           <DarkModeToggle />
         </div>
