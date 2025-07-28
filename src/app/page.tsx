@@ -20,6 +20,10 @@ import {
   SiSpringboot,
   SiStreamlit,
   SiOpenai,
+  SiSupabase,
+  SiRedis,
+  SiStripe,
+  SiClerk,
 } from "react-icons/si";
 import ProjectCard from "@/components/ProjectCard";
 import { darklogo, logo } from "../../public";
@@ -54,7 +58,7 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-4">
           <a
-            href="/JOEL_GARCIA_Resume.pdf"
+            href="/JOEL_GARCIA_RESUME2.pdf"
             className="bg-black text-white px-4 py-2 rounded flex items-center gap-2 dark:border hover:bg-gray-800 text-xs"
             download
           >
@@ -140,11 +144,45 @@ export default function Home() {
             <SiOpenai className="mx-auto text-3xl" />
             <p className="text-sm font-semibold mt-2">OpenAI</p>
           </div>
+
+          <div>
+            <SiSupabase className="mx-auto text-3xl" />
+            <p className="text-sm font-semibold mt-2">Supabase</p>
+          </div>
+          <div>
+            <SiClerk className="mx-auto text-3xl" />
+            <p className="text-sm font-semibold mt-2">Clerk</p>
+          </div>
+          <div>
+            <SiStripe className="mx-auto text-3xl" />
+            <p className="text-sm font-semibold mt-2">Stripe</p>
+          </div>
+          <div>
+            <SiRedis className="mx-auto text-3xl" />
+            <p className="text-sm font-semibold mt-2">Redis</p>
+          </div>
         </div>
       </section>
 
       <section className="max-w-3xl mx-auto mb-12 space-y-8">
         <h2 className="text-lg font-semibold mb-4">Projects</h2>
+        <ProjectCard
+          title="BuddhaBasha Jewelry Store"
+          description="Full-stack e-commerce platform built for a handmade jewelry business with modern checkout and shipping integration."
+          techStack={[
+            "Next.js",
+            "Django",
+            "Supabase",
+            "Stripe",
+            "Clerk",
+            "Cloudinary",
+            "Shippo",
+          ]}
+          role="Built full-stack solution including dynamic cart, secure checkout, and admin tools"
+          outcome="Client-ready e-commerce site with automated order & shipping"
+          linkLabel="Live Site"
+          linkHref="https://buddhabashafrontend.vercel.app/" // replace with real URL if not yet live
+        />
         <ProjectCard
           title="AI Chatbot for Real Estate"
           description="Custom AI chatbot for MJ Estates realty to automate property Q&A and lead generation in English and Spanish."
@@ -206,7 +244,7 @@ export default function Home() {
 
         <div>
           <h3 className="text-md font-semibold">
-            Freelance Web Developer – RESTweb Dev (01/2021 – Current)
+            Freelance Web Developer – RESTweb Dev (11/2024 – Current)
           </h3>
           <ul className="list-disc list-inside text-sm text-gray-800 dark:text-gray-300 mt-2 space-y-1">
             <li>
@@ -230,7 +268,7 @@ export default function Home() {
 
         <div>
           <h3 className="text-md font-semibold">
-            IT Assistant – Lee Construction Company (01/2025 – Current)
+            IT Support Specialist – Lee Construction Company (01/2025 – Current)
           </h3>
           <ul className="list-disc list-inside text-sm text-gray-800 dark:text-gray-300 mt-2 space-y-1">
             <li>
@@ -245,7 +283,7 @@ export default function Home() {
 
         <div>
           <h3 className="text-md font-semibold">
-            Property Manager – MJ Estates (11/2022 – Current)
+            Property Manager – MJ Estates (01/2021 – Current)
           </h3>
           <ul className="list-disc list-inside text-sm text-gray-800 dark:text-gray-300 mt-2 space-y-1">
             <li>
