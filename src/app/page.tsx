@@ -181,7 +181,7 @@ export default function Home() {
           role="Built full-stack solution including dynamic cart, secure checkout, and admin tools"
           outcome="Client-ready e-commerce site with automated order & shipping"
           linkLabel="Live Site"
-          linkHref="https://buddhabashafrontend.vercel.app/" // replace with real URL if not yet live
+          linkHref="https://www.buddhabashajewelry.com"
         />
         <ProjectCard
           title="AI Chatbot for Real Estate"
