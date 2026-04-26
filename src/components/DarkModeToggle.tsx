@@ -1,39 +1,28 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FaSun, FaMoon } from "react-icons/fa";
 
 export default function DarkModeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    const stored = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    if (stored === "dark" || (!stored && prefersDark)) {
-      setIsDark(true);
-    }
+    setIsDark(document.documentElement.classList.contains("dark"));
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = !isDark ? "dark" : "light";
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark", !isDark);
-    setIsDark(!isDark);
+    const next = !isDark;
+    localStorage.setItem("theme", next ? "dark" : "light");
+    document.documentElement.classList.toggle("dark", next);
+    setIsDark(next);
   };
 
   return (
     <button
       onClick={toggleTheme}
-      className="text-2xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-      aria-label="Toggle Dark Mode"
+      className="text-xs px-2.5 py-1 rounded border border-zinc-300 dark:border-zinc-700 text-zinc-500 dark:text-zinc-500 hover:text-green-600 dark:hover:text-green-400 hover:border-green-600 dark:hover:border-green-400 transition-colors"
+      aria-label="Toggle theme"
     >
-      {isDark ? (
-        <FaSun className="text-yellow-400" />
-      ) : (
-        <FaMoon className="text-gray-800 dark:text-white" />
-      )}
+      {isDark ? "light" : "dark"}
     </button>
   );
 }
