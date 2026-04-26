@@ -1,52 +1,42 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import DarkModeToggle from "@/components/DarkModeToggle";
 
-const inter = Inter({
-  variable: "--font-inter",
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Joel Garcia | Full-Stack Developer",
+  title: "Joel Garcia | Backend API Engineer",
   description:
-    "Full-stack developer building web applications with React, Next.js, Django, and AI tools. Based in Miami, FL.",
+    "Backend API Engineer building reliable APIs, scalable systems, and production services with Python, Django, and PostgreSQL.",
   icons: {
     icon: "/jglogo.ico",
   },
   metadataBase: new URL("https://joellgarcia.com"),
   keywords: [
-    "full-stack developer",
-    "React developer",
-    "Next.js portfolio",
+    "backend engineer",
+    "API engineer",
+    "Python developer",
     "Django developer",
-    "Miami web developer",
-    "AI developer portfolio",
+    "PostgreSQL",
+    "Miami software engineer",
   ],
   openGraph: {
-    title: "Joel Garcia | Full-Stack Developer",
+    title: "Joel Garcia | Backend API Engineer",
     description:
-      "Showcasing full-stack projects built with React, Next.js, Django, and OpenAI.",
-    url: "https://joelgarcia.dev",
-    siteName: "Joel Garcia Portfolio",
-    images: [
-      {
-        url: "https://joelgarcia.dev/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Joel Garcia Full-Stack Developer Portfolio",
-      },
-    ],
+      "Backend API Engineer building reliable APIs and scalable systems with Python, Django, and PostgreSQL.",
+    url: "https://joellgarcia.com",
+    siteName: "Joel Garcia",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Joel Garcia | Full-Stack Developer",
+    title: "Joel Garcia | Backend API Engineer",
     description:
-      "Explore Joel Garcia's portfolio with modern web projects and AI-powered tools.",
-    images: ["https://joelgarcia.dev/images/og-image.jpg"],
+      "Backend API Engineer building reliable APIs and scalable systems with Python, Django, and PostgreSQL.",
   },
 };
 
@@ -64,7 +54,8 @@ export default function RootLayout({
               (function () {
                 const theme = localStorage.getItem('theme');
                 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                if (theme === 'dark' || (!theme && prefersDark)) {
+                if (theme === 'light') return;
+                if (theme === 'dark' || prefersDark) {
                   document.documentElement.classList.add('dark');
                 }
               })();
@@ -72,10 +63,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <div className="fixed top-4 right-4 z-50">
-          <DarkModeToggle />
-        </div>
+      <body className={`${mono.variable} font-mono antialiased`}>
         {children}
       </body>
     </html>
